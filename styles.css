@@ -111,6 +111,9 @@ a:hover { text-decoration: underline; opacity: 0.85; }
 .btn-primary:hover { background: var(--blue-hover); text-decoration: none; }
 .btn-secondary { background: var(--white); color: var(--charcoal); border: 1px solid var(--lightgray); }
 .btn-secondary:hover { background: #F5F5F5; border-color: var(--gray-muted); text-decoration: none; }
+.btn-badge { background: var(--white); padding: 8px 10px; border: 1px solid var(--offwhite); box-shadow: none; }
+.btn-badge:hover { background: #F5F5F5; text-decoration: none; }
+.gplay-badge { display: block; height: 44px; width: auto; }
 
 /* Section */
 .section { padding: 64px 0; }
