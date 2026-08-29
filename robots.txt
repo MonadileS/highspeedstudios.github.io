@@ -13,4 +13,4 @@ Allow: /
 User-agent: AdsBot-Google
 Allow: /
 
-Sitemap: https://monadiles.github.io/highspeedstudios.github.io/sitemap.xml
+Sitemap: https://highspeedstudios.space/sitemap.xml
