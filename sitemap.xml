@@ -6,6 +6,21 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://highspeedstudios.space/custom-tunnel.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://highspeedstudios.space/pdfiles-merger.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://highspeedstudios.space/onething-quran.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://highspeedstudios.space/privacy-policy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

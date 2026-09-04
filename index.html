@@ -18,7 +18,14 @@
     <div class="inner">
       <img class="brand-logo" src="assets/HighSpeedStudios_logo.svg" alt="HighSpeedStudios" />
       <nav class="nav-links">
-        <a href="#apps">Apps</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Apps <i data-lucide="chevron-down" class="ico-dropdown"></i></button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="custom-tunnel.html" role="menuitem"><img src="assets/custom_tunnel_icon.png" alt="" class="dd-icon" /> Custom Tunnel — AIO Tunnel VPN</a>
+            <a href="pdfiles-merger.html" role="menuitem"><img src="assets/pdfiles_merger.png" alt="" class="dd-icon" /> PDFiles Merger</a>
+            <a href="onething-quran.html" role="menuitem"><img src="assets/onething_quran.png" alt="" class="dd-icon" /> OneThing Quran</a>
+          </div>
+        </div>
         <a href="#about">About</a>
         <a href="privacy-policy.html">Privacy</a>
         <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/developer?id=HighSpeedStudios">Google Play</a>
@@ -47,8 +54,8 @@
         <div class="apps-grid">
 
           <article class="app-card">
-            <img class="icon" src="assets/pdfiles_merger.png" alt="PDFiles Merger app icon" />
-            <h3>PDFiles Merger: Combine PDFs</h3>
+            <a href="pdfiles-merger.html"><img class="icon" src="assets/pdfiles_merger.png" alt="PDFiles Merger app icon" /></a>
+            <h3><a href="pdfiles-merger.html">PDFiles Merger: Combine PDFs</a></h3>
             <div class="tag-row">
               <span class="tag">Productivity</span>
               <span class="tag">Offline</span>
@@ -59,12 +66,13 @@
               <a class="btn btn-badge" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.pdfmerger.app">
                 <img class="gplay-badge" src="assets/google-play-badge.svg" alt="Get it on Google Play" />
               </a>
+              <a class="details-link" href="pdfiles-merger.html">View details →</a>
             </div>
           </article>
 
           <article class="app-card">
-            <img class="icon" src="assets/onething_quran.png" alt="OneThing Quran app icon" />
-            <h3>OneThing Quran | القرآن الكريم</h3>
+            <a href="onething-quran.html"><img class="icon" src="assets/onething_quran.png" alt="OneThing Quran app icon" /></a>
+            <h3><a href="onething-quran.html">OneThing Quran | القرآن الكريم</a></h3>
             <div class="tag-row">
               <span class="tag">Faith</span>
               <span class="tag">Offline</span>
@@ -75,12 +83,13 @@
               <a class="btn btn-badge" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.onething.quran">
                 <img class="gplay-badge" src="assets/google-play-badge.svg" alt="Get it on Google Play" />
               </a>
+              <a class="details-link" href="onething-quran.html">View details →</a>
             </div>
           </article>
 
           <article class="app-card">
-            <img class="icon" src="assets/custom_tunnel_icon.png" alt="Custom Tunnel app icon" />
-            <h3>Custom Tunnel — AIO Tunnel VPN</h3>
+            <a href="custom-tunnel.html"><img class="icon" src="assets/custom_tunnel_icon.png" alt="Custom Tunnel app icon" /></a>
+            <h3><a href="custom-tunnel.html">Custom Tunnel — AIO Tunnel VPN</a></h3>
             <div class="tag-row">
               <span class="tag">VPN</span>
               <span class="tag">Privacy</span>
@@ -91,6 +100,7 @@
               <a class="btn btn-badge" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.customtunnel.aiotunnelvpn">
                 <img class="gplay-badge" src="assets/google-play-badge.svg" alt="Get it on Google Play" />
               </a>
+              <a class="details-link" href="custom-tunnel.html">View details →</a>
             </div>
           </article>
 
@@ -164,6 +174,18 @@
 
   <script>
     lucide.createIcons();
+    // Dropdown toggle for Apps (click + outside close)
+    (function(){
+      const btn = document.querySelector('.nav-dropdown-btn');
+      const menu = document.querySelector('.nav-dropdown-menu');
+      if(!btn||!menu) return;
+      btn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', ()=>{ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+    })();
   </script>
 </body>
 </html>

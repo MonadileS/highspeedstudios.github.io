@@ -14,10 +14,18 @@
 <body>
   <header class="site-header">
     <div class="inner">
-          <img class="brand-logo" src="assets/HighSpeedStudios_logo.svg" alt="HighSpeedStudios" />
+      <a href="index.html"><img class="brand-logo" src="assets/HighSpeedStudios_logo.svg" alt="HighSpeedStudios" /></a>
       <nav class="nav-links">
-        <a href="index.html">Apps</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn" aria-haspopup="true" aria-expanded="false">Apps <i data-lucide="chevron-down" class="ico-dropdown"></i></button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="custom-tunnel.html" role="menuitem"><img src="assets/custom_tunnel_icon.png" alt="" class="dd-icon" /> Custom Tunnel — AIO Tunnel VPN</a>
+            <a href="pdfiles-merger.html" role="menuitem"><img src="assets/pdfiles_merger.png" alt="" class="dd-icon" /> PDFiles Merger</a>
+            <a href="onething-quran.html" role="menuitem"><img src="assets/onething_quran.png" alt="" class="dd-icon" /> OneThing Quran</a>
+          </div>
+        </div>
         <a href="index.html#about">About</a>
+        <a href="privacy-policy.html">Privacy</a>
         <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/developer?id=HighSpeedStudios">Google Play</a>
       </nav>
     </div>
@@ -79,9 +87,9 @@
         </div>
         <div>
           <h5>Apps</h5>
-          <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.pdfmerger.app">PDFiles Merger</a>
-          <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.onething.quran">OneThing Quran</a>
-          <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/developer?id=HighSpeedStudios">Custom Tunnel</a>
+          <a href="custom-tunnel.html">Custom Tunnel</a>
+          <a href="pdfiles-merger.html">PDFiles Merger</a>
+          <a href="onething-quran.html">OneThing Quran</a>
         </div>
         <div>
           <h5>Company</h5>
@@ -90,8 +98,12 @@
           <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/developer?id=HighSpeedStudios">Google Play</a>
         </div>
       </div>
-      <p class="copy">© 2026 HighSpeedStudios. All rights reserved.</p>
+      <p class="copy">© 2026 HighSpeedStudios. All rights reserved. • <a href="app-ads.txt">app-ads.txt</a></p>
     </div>
   </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();
+    (function(){const b=document.querySelector('.nav-dropdown-btn'),m=document.querySelector('.nav-dropdown-menu');if(!b||!m) return;b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});document.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded','false');});})();
+  </script>
 </body>
 </html>
